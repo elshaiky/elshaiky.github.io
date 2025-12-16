@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    width: 92%;
+    max-width: 380px;
+    padding: 32px 26px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    animation: fadeIn 0.8s ease;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 22px;
+}
+
+/* Links */
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.link:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.link:active {
+    transform: scale(0.97);
+}
+
+/* Social Colors */
+.instagram { background: #E1306C; }
+.facebook  { background: #1877F2; }
+.x         { background: #000000; }
+.tiktok    { background: #010101; }
+.whatsapp  { background: #25D366; }
+
+/* Snapchat */
+.snapchat {
+    background: #FFFC00;
+    color: #000000;
+}
+
+.snapchat i {
+    color: #000000;
+}
+
+.snapchat-box {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.snap-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.snapchat-box img {
+    width: 160px;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 8px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌙 Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #0f0f14;
+    }
+
+    .card {
+        background: #1c1c23;
+        color: #ffffff;
+    }
+
+    .card p {
+        color: #b5b5c5;
+    }
+
+    /* Fix X & TikTok */
+    .x,
+    .tiktok {
+        background: #ffffff;
+        color: #000000;
+        border: 1px solid #444;
+    }
+
+    .x i,
+    .tiktok i {
+        color: #000000;
+    }
+
+    /* Snapchat */
+    .snapchat {
+        background: #ffeb3b;
+        color: #000000;
+    }
+
+    .snapchat-box img {
+        background: #ffffff;
+    }
+}
